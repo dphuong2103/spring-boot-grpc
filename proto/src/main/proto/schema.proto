@@ -1,0 +1,20 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package com.grpc;
+
+message User{
+  string id = 1;
+  string name = 2;
+}
+
+message IsUserBlackList{
+  bool isBlacklist = 1;
+}
+
+service UserService{
+  rpc isBlackList(User) returns (IsUserBlackList){};
+
+  rpc getUserStream(User) returns (stream User){};
+
+  rpc sendUserStream(stream User) returns (User){};
+}
