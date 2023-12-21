@@ -5,8 +5,6 @@ import com.grpc.UserServiceGrpc;
 import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
 import org.example.TemporaryDB;
-
-import java.util.ArrayList;
 import java.util.List;
 
 @GrpcService
